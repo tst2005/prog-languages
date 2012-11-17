@@ -1,0 +1,52 @@
+sources:
+javascript:
+	http://www.w3schools.com/js/js_operators.asp
+	http://www.w3schools.com/js/js_comparisons.asp
+	https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators
+Lua:
+	http://bitop.luajit.org/api.html
+
+
+Desc.			Lua			JavaScript		 C
+=====			===			==========		===
+			string.len	
+			string.char	
+			string.byte	
+			string.sub	
+			math.floor		
+shortuct:
+a = a ^ b					a ^= b
+a = a & b					a &= b (idem ^&|+-)
+a = a << b					a <<= b
+
+Bitwise NOT		bit.bnot
+Bitwise AND		bit.band(a, b)		a & b			a & b
+Bitwise OR		bit.bor(a, b)		a | b			a | b
+Bitwise XOR		bit.bxor(a, b)		a ^ b			a ^ b
+Left shift		bit.lshift		a << b			a << b
+
+Sign-propagating \
+right shift		bit.arshift		a >> b			a >> b
+
+Zero-fill \
+right shift		bit.rshift		a >>> b
+
+			bit.rol(x, n)
+			bit.ror(x, n)
+			bit.bswap(x)
+
+
+
+
+				js: var s = new Array(256);
+				lua: local s = {}; -- dynamic-size
+				lua: for i=1,256 do s[i] = default_value; -- fill the 256 items
+
+				js: for(i=0; i<256; i++)
+				lua: for i=0,255,1
+				lua: for i=1,256,1
+
+unicode...			js: var code = s.charCodeAt(n)
+				lua: local code = s:byte(n) -- not really unicode...
+
+
